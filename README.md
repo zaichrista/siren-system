@@ -2,20 +2,21 @@
 
 A self-contained static web app. No package installation or build step is required.
 
-## Open in VS Code
+## Files (all in `dist/`)
 
-Open the `siren-system` folder in VS Code. The app files are in `dist/`:
-
-- `dist/index.html` — page structure and written content
-- `dist/styles.css` — colours, typography, layout and responsive styles
-- `dist/app.js` — quests, XP, levels, streaks, Pearls, routines, journal and saved settings
+- `index.html`: page shell and the loading screen
+- `styles.css`: themes, typography, layout
+- `app.js`: plan, rituals, vitals, reviews, journal, settings, backups
+- `logo.svg`, `icon-*.png`, `manifest.webmanifest`, `sw.js`: logo, home-screen icons, installable app and offline support
 
 ## Preview locally
 
-The easiest option is the VS Code **Live Server** extension: open `dist/index.html` and choose **Open with Live Server**. You can also start a simple server from the `dist` folder with `python3 -m http.server 8000`, then visit `http://localhost:8000`.
+Open `dist/index.html` directly, or run `python3 -m http.server 8000` inside `dist` and visit `http://localhost:8000`.
 
-Your diary is saved in the browser's local storage on the device where you use it. Use **Save a copy of my diary** in the app to export a backup.
+## Your data
+
+Your diary is saved in the browser's local storage on that device. Use **Settings → Save a backup** regularly, and on iPad use **Share → Add to Home Screen** so Safari does not clear inactive site data. **Restore from a backup** brings a saved copy back.
 
 ## Scoring note
 
-The app preserves the recovered original quest values and 235 XP daily checklist total. Settings explains which quest labels, level thresholds, Pearl conversion and treats are reconstructed because the full handbook was not present in the project files.
+The recovered original quest values and 235 XP full checklist are preserved. The +50 daily bonus is now for finishing everything in *your* plan. Level thresholds, Pearl conversion and rewards are reconstructed defaults.
